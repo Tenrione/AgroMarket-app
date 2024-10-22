@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -8,7 +7,6 @@ import {
 import Login from "./components/Login";
 import Register from "./components/Register";
 import AppMain from "./components/AppMain";
-import Navbar from "./components/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {

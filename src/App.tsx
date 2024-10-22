@@ -1,27 +1,26 @@
-import { useState } from 'react'
-import './App.css'
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import AppMain from "./components/AppMain";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-
   return (
-<body>
-    <div className="Contenido">
-        <div className="encabezado">
-             <div className="centrar">
-            <header>
-                <h1>AgroMarketPanama</h1>
-            </header>
-            <h3>"Plataforma de comercio digital para insumos agropecuarios"</h3>
-        </div>
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#">¡Compra nuestros productos!</a>
-            <a href="#">Sobre Nosotros</a>
-        </nav>
-    </div>
-</div>
-</body>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/app" element={<AppMain />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,14 @@
+body {
+  transition: background-color 0.5s ease, color 0.5s ease; /* Suaviza la transición de fondo y color */
+  min-height: 100vh; /* Asegura que el body cubra toda la pantalla */
+}
+
+body.light {
+  background-color: white;
+  color: black; /* Texto negro en modo claro */
+}
+
+body.dark {
+  background-color: #333;
+  color: white; /* Texto blanco en modo oscuro */
+}
